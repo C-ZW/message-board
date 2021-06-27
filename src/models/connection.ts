@@ -11,7 +11,11 @@ const sequelize = new Sequelize('sqlite::memory', {
         createdAt: 'create_time',
         updatedAt: 'update_at'
     },
-    logging: Config.ENV === 'development'
+    logging: Config.ENV === 'development',
+    pool: {
+        max: 5,
+        min: 5
+    }
 });
 
 export {
