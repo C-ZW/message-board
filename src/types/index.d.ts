@@ -4,7 +4,7 @@ declare global {
     namespace Express {
         interface Request {
             //@ts-ignore
-            user: {
+            user?: {
                 id: string;
                 username: string;
                 createTime: string
